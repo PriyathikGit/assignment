@@ -1,0 +1,92 @@
+@media (max-width:820px){
+    
+    .container{
+        width: 100% !important;
+
+    }
+    .left-bar{
+        display:none;
+    }
+
+    .right-bar{
+        display: none !important;
+    }
+    .header-2{
+        width: 111%;
+    }
+    .rightBtn{
+        display: none !important;
+    }
+    
+    .search-bar{
+        display: none;
+    }
+    .logo-box{
+        display: block;
+        width: 50px;
+        margin-left: 20px;
+    }
+
+    .sm1-bx{
+        display: none;
+    }
+    .last-container{
+        flex-flow: column;
+    }
+    .sm1-bx ,img{
+        margin-right: 10px;
+    }
+    .last-box{
+        justify-content: flex-end;
+    }
+    .active-status{
+        display: none;
+    }
+
+    .img-cnt{
+        flex-flow: column;
+    }
+
+    .ham{
+        padding: 0;
+        margin: 10px;
+    }
+
+    .main-title{
+        margin-top: 10px;
+        margin-left: 14px;
+    }
+
+    .mid-cont{
+        width: auto;
+        margin-top: 10rem;
+
+    }
+
+    .chat-box{
+        width: 0 !important;
+        margin: 0 190px;
+    }
+    .chatcnt{
+        width: 18rem !important;
+        height: 4rem !important;
+    }
+
+    .iconBox{
+        margin: 10px 0 !important;
+    }
+
+    .iconBox1{
+        display: none !important;
+        
+
+    }
+    .sndBtn{
+        position: absolute;
+        left: 154px;
+    }
+
+    .box2{
+        margin: 0 10px !important;
+    }
+}

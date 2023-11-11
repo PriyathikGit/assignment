@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=AR+One+Sans&family=Roboto:wght@300&display=swap');
+.container{
+    width: calc(100vw - 70px);
+    height: calc(100vh - 4rem);
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.header-2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+}
+
+.box1{
+    padding: 24px;
+    display: flex;
+    cursor: pointer;
+}
+
+.red{
+    width: 30px;
+    background-color: rgba(255, 0, 0, 0.178);
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    margin-left: 10px;
+    color: red;
+    font-size: 1rem;
+}
+.sm-bx{
+    display: flex;
+    padding-left: 24px;
+    flex-direction: column;
+}
+
+.bt-0{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    line-height: 25px;
+
+}
+
+.box2{
+    padding-right: 3rem;
+}
+
+.box2 svg{
+ margin: 0 8px;
+ cursor: pointer;
+}
+
+.content-2{
+    display: flex;
+    align-items: center;
+    border-bottom: 0.2px solid rgba(128, 128, 128, 0.452);
+}
+
+.text-box{
+    margin-top: 18px;
+    margin-left: 50px;
+    width: auto;
+    gap: 46px;
+    display: flex;
+}
+.text-box span{
+    color: gray;
+    font: bold 14px 'Roboto';
+    padding-bottom: 6px;
+}
+
+.bt-1{
+    width: 65px;
+    height: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bt-1:hover{
+    background-color:  rgb(228, 246, 255);
+    border-radius: 8px 8px 0 0;
+    cursor: pointer;
+}
+.mid-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 4rem;
+}
+
+.last-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.iconBox{
+    width: 12rem;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.459);
+    margin: 0 5px;
+    border-radius: 6px;
+    border: none;
+    gap: 22px;
+}
+.iconBox:hover{
+    background-color: rgba(136, 136, 247, 0.349);
+}
+
+.iconBox svg{
+    fill:  rgb(11, 90, 236);
+}
+
+.iconBox span{
+    color: rgb(11, 90, 236);
+    font: 1000 1rem "Roboto";
+}
+
+.bt-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    line-height: 20px;
+    padding-bottom: 6rem;
+}
+
+.rowBox{
+    display: flex;
+    gap: 14px;
+}
+
+.chat-box{
+    width: calc(100vw - 70px - 70px);
+    position: absolute;
+    height: 50px;
+display: flex;
+background-color: white;
+justify-content: center;
+    bottom: 0;
+    align-items: center;
+    padding-bottom: 3rem;
+}
+
+.chatcnt{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid rgba(128, 128, 128, 0.384);
+    border-radius: 10px;
+    width: 45rem;
+    height: 38px;
+    align-items: center;
+}
+.chat-box span{
+    height: 20px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 50%;
+    font-size: 19px;
+    font-weight: bolder;
+    margin-right: 14px;
+}
+.chatcnt input{
+    padding: 0 10px;
+    width: 22rem;
+    margin-left: 10px;
+    height: 25px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.iconBox1{
+    width: 12rem;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.459);
+    margin: 0 5px;
+    border-radius: 6px;
+    border: none;
+    gap: 22px;
+}
+
+.sndBtn{
+    margin-left: 14px;
+}
