@@ -12,6 +12,7 @@ btn.addEventListener('click', () => {
 })
 
 leftBar.style.display = 'none'
+
 document.getElementById('newBtn').addEventListener('click', () => {
     window.location.href = "index2.html"
 })
@@ -100,4 +101,12 @@ window.addEventListener('resize', MediaQuery);
 
 document.getElementById('pageCng').addEventListener('click', () => {
     window.location.href = "index2.html"
+})
+
+document.getElementById('pageCHng').addEventListener('click', () => {
+    window.location.href = "index2.html"
+})
+document.getElementById('backBtn').addEventListener('click', () => {
+    // 
+    console.log('hello')
 })
