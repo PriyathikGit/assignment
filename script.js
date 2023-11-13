@@ -126,8 +126,6 @@ const MediaQuery = () => {
 MediaQuery();
 window.addEventListener('resize', MediaQuery);
 
-// document.getElementById('chatIcon').addEventListener('click',(e)=>{
-//     // e.preventDefault()
-//     console.log('hello')
-//     // window.location.href="index.html"
-// })
+document.getElementById('pageCng').addEventListener('click',()=>{
+    window.location.href="index2.html"
+})
