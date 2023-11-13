@@ -7,9 +7,13 @@ const leftIcons = document.querySelectorAll('.leftIcons')
 const btn = document.getElementsByClassName('btn')[0]
 const rowBox = document.getElementById('rowBox')
 
-btn.addEventListener('click', () => {
-    window.location.href = "index2.html"
-})
+// const pagefn=()=>{
+//     btn.addEventListener('click', () => {
+//         window.location.href = "index2.html"
+//     })
+// }
+
+
 document.getElementById('newBtn').addEventListener('click', () => {
     window.location.href = "index2.html"
 })
@@ -28,17 +32,16 @@ rightBtn.addEventListener('click', () => {
 let isLeftBarExpanded = false;
 
 
-ham.addEventListener('click', () => {
+ham.addEventListener('click', (e) => {
     if (isLeftBarExpanded) {
         // Code for when left bar is expanded
         leftBar.style.width = "70px";
         leftIcons.forEach(function (icon) {
             icon.style.display = "flex";
         });
-        rowBox.style.width = "10rem";
-        rowBox.style.display = "flex";
-        rowBox.style.justifyContent = "space-between";
-        
+
+        document.getElementsByClassName('main-box')[0].style.display = "none"
+
     } else {
         // Code for when left bar is not expanded
         leftBar.style.display = "flex"
@@ -46,7 +49,20 @@ ham.addEventListener('click', () => {
         leftIcons.forEach(function (icon) {
             icon.style.display = "none";
         });
-        rowBox.style.display = "none"
+        document.getElementsByClassName('main-box')[0].style.display = "flex"
+        document.getElementsByClassName('main-box')[0].style.width = "10rem"
+        // width: 100%;
+        // display: flex;
+        // justify-content: space-between;
+        rowBox.style.width = "100%";
+        rowBox.style.display = "flex";
+        rowBox.style.justifyContent = "space-between";
+        if (btn) {
+            btn.addEventListener('click', () => {
+                window.location.href = "index2.html";
+            });
+        }
+
     }
 
     isLeftBarExpanded = !isLeftBarExpanded; // Toggle the state
@@ -100,12 +116,18 @@ leftBar.addEventListener('mouseout', () => {
 
 let hidefun = window.matchMedia('(max-width:820px)')
 const MediaQuery = () => {
-    if (hidefun.matches){
-        document.getElementsByClassName('main-box')[0].style.display='none'
+    if (hidefun.matches) {
+        document.getElementsByClassName('main-box')[0].style.display = 'none'
     }
-    else{
-        document.getElementsByClassName('main-box')[0].style.display='flex'
+    else {
+        document.getElementsByClassName('main-box')[0].style.display = 'flex'
     }
 }
 MediaQuery();
 window.addEventListener('resize', MediaQuery);
+
+// document.getElementById('chatIcon').addEventListener('click',(e)=>{
+//     // e.preventDefault()
+//     console.log('hello')
+//     // window.location.href="index.html"
+// })
