@@ -7,13 +7,23 @@ const leftIcons = document.querySelectorAll('.leftIcons')
 const btn = document.getElementsByClassName('btn')[0]
 const rowBox = document.getElementById('rowBox')
 
-    btn.addEventListener('click', () => {
-        window.location.href = "index2.html"
-    })
+btn.addEventListener('click', () => {
+    window.location.href = "index2.html"
+})
 
+leftBar.style.display = 'none'
 
 document.getElementById('newBtn').addEventListener('click', () => {
     window.location.href = "index2.html"
+})
+
+document.getElementById('pageCHng').addEventListener('click', () => {
+    window.location.href = "index2.html"
+})
+
+document.getElementById('backBtn').addEventListener('click', () => {
+    window.location.href = "index.html"
+    console.log('html')
 })
 
 rightBar.style.display = "none"
@@ -27,64 +37,34 @@ rightBtn.addEventListener('click', () => {
     }
 })
 
-let isLeftBarExpanded = false;
-
-
-ham.addEventListener('click', (e) => {
-    if (isLeftBarExpanded) {
-        // Code for when left bar is expanded
-        leftBar.style.width = "70px";
-        leftIcons.forEach(function (icon) {
-            icon.style.display = "flex";
-        });
-
-        document.getElementsByClassName('main-box')[0].style.display = "none"
+ham.addEventListener('click', (event) => {
+    // Toggle the display property of leftBar
+    if (leftBar.style.display === 'flex') {
+        leftBar.style.display = 'none';
 
     } else {
-        // Code for when left bar is not expanded
-        leftBar.style.display = "flex"
-        leftBar.style.width = "200px";
-        leftIcons.forEach(function (icon) {
-            icon.style.display = "none";
-        });
-        document.getElementsByClassName('main-box')[0].style.display = "flex"
-        document.getElementsByClassName('main-box')[0].style.width = "10rem"
-        // width: 100%;
-        // display: flex;
-        // justify-content: space-between;
-        rowBox.style.width = "100%";
-        rowBox.style.display = "flex";
-        rowBox.style.justifyContent = "space-between";
-        if (btn) {
-            btn.addEventListener('click', () => {
-                window.location.href = "index2.html";
-            });
-        }
+        leftBar.style.display = 'flex';
+        leftBar.style.width="200px"
+        leftBar.style.alignItems='flex-start'
 
     }
-
-    isLeftBarExpanded = !isLeftBarExpanded; // Toggle the state
+    
+    // Prevent the click event from propagating further, so it doesn't trigger the document click event immediately
+    event.stopPropagation();
 });
 
-// Add an event listener to reset the state when the document is clicked
+// Event listener to close leftBar when clicking anywhere else on the document
 document.addEventListener('click', (event) => {
-    const target = event.target;
-    const isHamButton = target === ham || ham.contains(target);
+    // Check if the click is outside of leftBar and ham icon
+    const isClickInsideLeftBar = leftBar.contains(event.target);
+    const isClickOnHam = event.target === ham;
 
-    // Check if the clicked element is not the ham button or its children
-    if (!isHamButton) {
-        // Reset to default state
-        leftBar.style.width = ""; // Set to default width
-        leftIcons.forEach(function (icon) {
-            icon.style.display = ""; // Set to default display
-        });
-        rowBox.style.width = ""; // Set to default width
-        rowBox.style.display = ""; // Set to default display
-        rowBox.style.justifyContent = ""; // Set to default justify content
-
-        isLeftBarExpanded = false; // Set the state to default
+    // If the click is outside of leftBar and ham icon, close leftBar
+    if (!isClickInsideLeftBar && !isClickOnHam && leftBar.style.display === 'flex') {
+        leftBar.style.display = 'none';
     }
 });
+
 
 
 
@@ -116,14 +96,18 @@ let hidefun = window.matchMedia('(max-width:820px)')
 const MediaQuery = () => {
     if (hidefun.matches) {
         document.getElementsByClassName('main-box')[0].style.display = 'none'
+        document.getElementsByClassName('leftRes')[0].style.display='block'
+        document.getElementsByClassName('iconsClass')[0].style.display='none'
     }
     else {
         document.getElementsByClassName('main-box')[0].style.display = 'flex'
+        document.getElementsByClassName('leftRes')[0].style.display='none'
+        document.getElementsByClassName('iconsClass')[0].style.display='flex'
     }
 }
 MediaQuery();
 window.addEventListener('resize', MediaQuery);
 
-document.getElementById('pageCng').addEventListener('click',()=>{
-    window.location.href="index2.html"
+document.getElementById('pageCng').addEventListener('click', () => {
+    window.location.href = "index2.html"
 })
