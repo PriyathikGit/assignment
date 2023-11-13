@@ -7,11 +7,9 @@ const leftIcons = document.querySelectorAll('.leftIcons')
 const btn = document.getElementsByClassName('btn')[0]
 const rowBox = document.getElementById('rowBox')
 
-// const pagefn=()=>{
-//     btn.addEventListener('click', () => {
-//         window.location.href = "index2.html"
-//     })
-// }
+    btn.addEventListener('click', () => {
+        window.location.href = "index2.html"
+    })
 
 
 document.getElementById('newBtn').addEventListener('click', () => {

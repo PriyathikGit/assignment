@@ -284,5 +284,10 @@ main{
     color: gray;
 }
 
+footer{
+    display: none;
+}
 
-
+.button{
+    display: none;
+}
