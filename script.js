@@ -92,7 +92,7 @@ const MediaQuery = () => {
     else {
         document.getElementsByClassName('main-box')[0].style.display = 'flex'
         document.getElementsByClassName('leftRes')[0].style.display='none'
-        document.getElementsByClassName('iconsClass')[0].style.display='block'
+        document.getElementsByClassName('iconsClass')[0].style.display='flex'
     }
 }
 MediaQuery();
