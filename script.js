@@ -7,51 +7,26 @@ const leftIcons = document.querySelectorAll('.leftIcons')
 const btn = document.getElementsByClassName('btn')[0]
 const rowBox = document.getElementById('rowBox')
 
-btn.addEventListener('click',()=>{
-    window.location.href="index2.html"
+btn.addEventListener('click', () => {
+    window.location.href = "index2.html"
 })
-document.getElementById('newBtn').addEventListener('click',()=>{
-    window.location.href="index2.html"
+document.getElementById('newBtn').addEventListener('click', () => {
+    window.location.href = "index2.html"
 })
-// leftIcons.forEach(function(icon) {
-//     icon.style.display = "block";
-// });
 
-// rightBtn.display.style="none"
-rightBar.style.display="none"
-rightBtn.style.display='block'
+rightBar.style.display = "none"
+rightBtn.style.display = 'block'
 
 
-rightBtn.addEventListener('click',()=>{
-    
-    if(rightBtn){
+rightBtn.addEventListener('click', () => {
+
+    if (rightBtn) {
         rightBar.style.display = rightBar.style.display === 'none' ? 'flex' : 'none';
     }
 })
 
 let isLeftBarExpanded = false;
 
-
-// ham.addEventListener('click', () => {
-//     if (isLeftBarExpanded) {
-//         leftBar.style.width = "70px";
-//         leftIcons.forEach(function (icon) {
-//             icon.style.display = "flex";
-//         });
-//         rowBox.style.width="10rem";
-//         rowBox.style.display="flex";
-//         rowBox.style.justifyContent="space-between";
-//     } else {
-//         leftBar.style.display="flex"
-//         leftBar.style.width = "200px";
-//         leftIcons.forEach(function (icon) {
-//             icon.style.display = "none";
-//         });
-//         rowBox.style.display="none"
-//     }
-
-//     isLeftBarExpanded = !isLeftBarExpanded; // Toggle the state
-// });
 
 ham.addEventListener('click', () => {
     if (isLeftBarExpanded) {
@@ -63,6 +38,7 @@ ham.addEventListener('click', () => {
         rowBox.style.width = "10rem";
         rowBox.style.display = "flex";
         rowBox.style.justifyContent = "space-between";
+        
     } else {
         // Code for when left bar is not expanded
         leftBar.style.display = "flex"
@@ -98,26 +74,38 @@ document.addEventListener('click', (event) => {
 
 
 
-leftBar.addEventListener('mouseover',(e)=>{
-    if(leftBar){
-        leftBar.style.width="200px";
-        leftIcons.forEach(function(icon) {
-            icon.style.display = icon.style.display === "none" ? "block" :"none";
+leftBar.addEventListener('mouseover', (e) => {
+    if (leftBar) {
+        leftBar.style.width = "200px";
+        leftIcons.forEach(function (icon) {
+            icon.style.display = icon.style.display === "none" ? "block" : "none";
         });
-        rowBox.style.width="10rem";
-        rowBox.style.display="flex";
-        rowBox.style.justifyContent="space-between";
+        rowBox.style.width = "10rem";
+        rowBox.style.display = "flex";
+        rowBox.style.justifyContent = "space-between";
     }
 
 })
 
 
-leftBar.addEventListener('mouseout',()=>{
-    if(leftBar){
-        leftBar.style.width="70px";
-        leftIcons.forEach(function(icon) {
-            icon.style.display = icon.style.display === "block" ? "none" :"block";
+leftBar.addEventListener('mouseout', () => {
+    if (leftBar) {
+        leftBar.style.width = "70px";
+        leftIcons.forEach(function (icon) {
+            icon.style.display = icon.style.display === "block" ? "none" : "block";
         });
-        rowBox.style.display="none"
+        rowBox.style.display = "none"
     }
 })
+
+let hidefun = window.matchMedia('(max-width:820px)')
+const MediaQuery = () => {
+    if (hidefun.matches){
+        document.getElementsByClassName('main-box')[0].style.display='none'
+    }
+    else{
+        document.getElementsByClassName('main-box')[0].style.display='flex'
+    }
+}
+MediaQuery();
+window.addEventListener('resize', MediaQuery);
