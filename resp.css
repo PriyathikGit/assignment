@@ -1,5 +1,5 @@
 @media (max-width:820px) {
-
+    
     .container {
         width: 100% !important;
 
@@ -70,6 +70,7 @@
     .mid-cont {
         width: 100%;
         margin-top: 10rem;
+        height: fit-content;
     }
 
     .hidebox {
