@@ -12,18 +12,8 @@ btn.addEventListener('click', () => {
 })
 
 leftBar.style.display = 'none'
-
 document.getElementById('newBtn').addEventListener('click', () => {
     window.location.href = "index2.html"
-})
-
-document.getElementById('pageCHng').addEventListener('click', () => {
-    window.location.href = "index2.html"
-})
-
-document.getElementById('backBtn').addEventListener('click', () => {
-    window.location.href = "index.html"
-    console.log('html')
 })
 
 rightBar.style.display = "none"
@@ -102,7 +92,7 @@ const MediaQuery = () => {
     else {
         document.getElementsByClassName('main-box')[0].style.display = 'flex'
         document.getElementsByClassName('leftRes')[0].style.display='none'
-        document.getElementsByClassName('iconsClass')[0].style.display='flex'
+        document.getElementsByClassName('iconsClass')[0].style.display='block'
     }
 }
 MediaQuery();
