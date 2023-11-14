@@ -204,3 +204,18 @@ justify-content: center;
 .sndBtn{
     margin-left: 14px;
 }
+
+.textBox{
+    
+}
+
+@media (max-width:820px){
+    .header-2{
+        
+        border: none;
+    }
+
+    .left-bar{
+        display: none;
+    }
+}
