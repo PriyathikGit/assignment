@@ -118,6 +118,7 @@ const styles2 = {
     alignItems: 'center',
     background: 'wheat',
     padding: '0px 22px',
+    margin : "120px 0",
     fontSize: '25px',
     borderRadius: '59px',
 
@@ -151,7 +152,7 @@ btn.addEventListener('click', () => {
             html += divElement.outerHTML;
 
             // Check if the element is a key in the message object
-            if (message[element.toLowerCase()]) {
+            if (message[element.toLowerCase()] || message[element.toUpperCase()]) {
                 const replyElement = document.createElement('div');
                 const randomMessage = getRandomMessage();
                 replyElement.textContent = randomMessage;
